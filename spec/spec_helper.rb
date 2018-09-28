@@ -1,4 +1,3 @@
-
 ENV['RACK_ENV'] = 'test'
 require_relative '../lib/app.rb'
 require 'capybara'
@@ -8,7 +7,7 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 
-Capybara.app = Chitchat
+Capybara.app = Chitchat_database
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -24,7 +23,6 @@ RSpec.configure do |config|
     puts "\e[33mHave you considered running rubocop? It will help you improve your code!\e[0m"
     puts "\e[33mTry it now! Just run: rubocop\e[0m"
   end
-
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
